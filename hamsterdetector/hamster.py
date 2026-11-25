@@ -1,10 +1,14 @@
+from pathlib import Path
+
 import cv2
 import mediapipe as mp
 
-hamster_surprise = cv2.imread("hamster1.jpg")
-hamster_peace = cv2.imread("hamster2.jpg")
-hamster_okay = cv2.imread("hamster3.jpg")
-hamster_idle = cv2.imread("hamster4.jpg")
+ASSET_DIR = Path(__file__).resolve().parent
+
+hamster_surprise = cv2.imread(str(ASSET_DIR / "hamster1.jpg"))
+hamster_peace = cv2.imread(str(ASSET_DIR / "hamster2.jpg"))
+hamster_okay = cv2.imread(str(ASSET_DIR / "hamster3.jpg"))
+hamster_idle = cv2.imread(str(ASSET_DIR / "hamster4.jpg"))
 
 current = hamster_idle
 
